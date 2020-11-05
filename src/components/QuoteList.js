@@ -1,5 +1,6 @@
 import React from "react";
 import QuoteCard from "./QuoteCard"
+import QuoteListStyled from '../StyledComponents/QuoteListeStyled';
 
 const quotes = [
   {
@@ -31,11 +32,11 @@ const quotes = [
 ];
 
 const QuoteList = () => (
-  <div>
+  <QuoteListStyled>
     {quotes.map((item) => (
   <QuoteCard key={item.quote} quote={item.quote} image={item.image} character={item.character} />
 ))}
-  </div>
+  </QuoteListStyled>
 );
 
 export default QuoteList;
